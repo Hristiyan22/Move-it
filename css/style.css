@@ -1,0 +1,141 @@
+/* style.css */
+
+/* 1. Дефиниране на CSS променливи */
+:root {
+    /* Светла тема (по подразбиране) */
+    --body-bg: #ffffff;
+    --text-color: #333333;
+    --navbar-bg: #f8f9fa; 
+    --border-color: #dee2e6;
+    --btn-secondary: #6c757d;
+}
+
+/* 2. Дефиниране на .dark-mode променливи */
+.dark-mode {
+    --body-bg: #1e1e1e;
+    --text-color: #f0f0f0;
+    --navbar-bg: #2d2d2d;
+    --border-color: #444444;
+    --btn-secondary: #adb5bd;
+}
+
+/* 3. Прилагане на променливите и Унифицирано оформление */
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Прилагане на стиловете на тъмната тема към Bootstrap елементи */
+.dark-mode .navbar {
+    background-color: var(--navbar-bg) !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .text-body-secondary {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .btn-outline-secondary {
+    color: var(--btn-secondary);
+    border-color: var(--btn-secondary);
+}
+.dark-mode .btn-outline-secondary:hover {
+    color: var(--body-bg);
+    background-color: var(--btn-secondary);
+}
+
+/* Стилизиране на граници и разделители */
+.dark-mode .border-bottom {
+    border-color: var(--border-color) !important;
+}
+.dark-mode hr {
+    background-color: var(--border-color);
+}
+
+.dark-mode #themeIcon[src*="moon-fill"] {
+    filter: brightness(0) invert(1);
+}
+
+/* Sun stays normal */
+#themeIcon[src*="sun"] {
+    filter: none;
+}
+
+.dark-mode .navbar-brand img[src*="box-seam"]{
+    filter: invert(1);
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature a.btn {
+    margin-top: auto;
+    align-self:flex-start;
+}
+
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+    background: linear-gradient(145deg, #0d6efd, #0a58ca);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+#carouselExampleIndicators {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#carouselExampleIndicators img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    transition: 0.2s all ease;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+ul.navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+
+footer .nav-link:hover {
+    color: #0d6efd;
+    transition: color 0.2s ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .feature {
+        margin-bottom: 3rem;
+    }
+}
