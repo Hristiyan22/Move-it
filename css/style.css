@@ -1,8 +1,4 @@
-/* style.css */
-
-/* 1. Дефиниране на CSS променливи */
 :root {
-    /* Светла тема (по подразбиране) */
     --body-bg: #ffffff;
     --text-color: #333333;
     --navbar-bg: #f8f9fa; 
@@ -10,7 +6,6 @@
     --btn-secondary: #6c757d;
 }
 
-/* 2. Дефиниране на .dark-mode променливи */
 .dark-mode {
     --body-bg: #1e1e1e;
     --text-color: #f0f0f0;
@@ -19,7 +14,6 @@
     --btn-secondary: #adb5bd;
 }
 
-/* 3. Прилагане на променливите и Унифицирано оформление */
 body {
     font-family: 'Inter', sans-serif;
     text-align: justify;
@@ -28,7 +22,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Прилагане на стиловете на тъмната тема към Bootstrap елементи */
 .dark-mode .navbar {
     background-color: var(--navbar-bg) !important;
 }
@@ -49,15 +42,16 @@ body {
     color: var(--btn-secondary);
     border-color: var(--btn-secondary);
 }
+
 .dark-mode .btn-outline-secondary:hover {
     color: var(--body-bg);
     background-color: var(--btn-secondary);
 }
 
-/* Стилизиране на граници и разделители */
 .dark-mode .border-bottom {
     border-color: var(--border-color) !important;
 }
+
 .dark-mode hr {
     background-color: var(--border-color);
 }
@@ -66,13 +60,21 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* Sun stays normal */
 #themeIcon[src*="sun"] {
     filter: none;
 }
 
 .dark-mode .navbar-brand img[src*="box-seam"]{
     filter: invert(1);
+}
+
+.dark-mode .card-body{
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.dark-mode table{
+    color: white;
 }
 
 .feature {
@@ -84,7 +86,6 @@ body {
     margin-top: auto;
     align-self:flex-start;
 }
-
 
 .feature-icon {
     width: 4rem;
@@ -123,6 +124,11 @@ body {
 
 section {
     padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.dark-mode section {
+    background-color: #1e1e1e;
 }
 
 ul.navbar-nav .nav-item {
@@ -132,6 +138,27 @@ ul.navbar-nav .nav-item {
 footer .nav-link:hover {
     color: #0d6efd;
     transition: color 0.2s ease-in-out;
+}
+
+.card-img-top{
+    height: 225px;
+    object-fit: cover;
+}
+
+.album .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .card-body {
+    background-color: white;
+    border-color: #444444;
+    color: #2d2d2d;
+}
+
+.dark-mode .album {
+    background-color: #2d2d2d;
 }
 
 @media (max-width: 992px) {
