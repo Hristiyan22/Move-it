@@ -1,4 +1,7 @@
+
+/* 1. Дефиниране на CSS променливи */
 :root {
+    /* Светла тема (по подразбиране) */
     --body-bg: #ffffff;
     --text-color: #333333;
     --navbar-bg: #f8f9fa; 
@@ -6,6 +9,7 @@
     --btn-secondary: #6c757d;
 }
 
+/* 2. Дефиниране на .dark-mode променливи */
 .dark-mode {
     --body-bg: #1e1e1e;
     --text-color: #f0f0f0;
@@ -14,6 +18,7 @@
     --btn-secondary: #adb5bd;
 }
 
+/* 3. Прилагане на променливите и Унифицирано оформление */
 body {
     font-family: 'Inter', sans-serif;
     text-align: justify;
@@ -22,6 +27,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Прилагане на стиловете на тъмната тема към Bootstrap елементи */
 .dark-mode .navbar {
     background-color: var(--navbar-bg) !important;
 }
@@ -42,16 +48,15 @@ body {
     color: var(--btn-secondary);
     border-color: var(--btn-secondary);
 }
-
 .dark-mode .btn-outline-secondary:hover {
     color: var(--body-bg);
     background-color: var(--btn-secondary);
 }
 
+/* Стилизиране на граници и разделители */
 .dark-mode .border-bottom {
     border-color: var(--border-color) !important;
 }
-
 .dark-mode hr {
     background-color: var(--border-color);
 }
@@ -60,6 +65,7 @@ body {
     filter: brightness(0) invert(1);
 }
 
+/* Слънцето остава нормално */
 #themeIcon[src*="sun"] {
     filter: none;
 }
@@ -68,11 +74,13 @@ body {
     filter: invert(1);
 }
 
+/*Dark mode prices-cards*/
 .dark-mode .card-body{
     background-color: #2d2d2d;
     color: white;
 }
 
+/*Table white font*/
 .dark-mode table{
     color: white;
 }
@@ -86,6 +94,7 @@ body {
     margin-top: auto;
     align-self:flex-start;
 }
+
 
 .feature-icon {
     width: 4rem;
@@ -124,11 +133,6 @@ body {
 
 section {
     padding: 4rem 0;
-    background-color: #f8f9fa;
-}
-
-.dark-mode section {
-    background-color: #1e1e1e;
 }
 
 ul.navbar-nav .nav-item {
@@ -140,6 +144,8 @@ footer .nav-link:hover {
     transition: color 0.2s ease-in-out;
 }
 
+/*Галерия*/
+
 .card-img-top{
     height: 225px;
     object-fit: cover;
@@ -150,16 +156,59 @@ footer .nav-link:hover {
     display: flex;
     flex-direction: column;
 }
-
 .dark-mode .card-body {
     background-color: white;
     border-color: #444444;
     color: #2d2d2d;
 }
 
-.dark-mode .album {
+
+/*Услуги*/
+.dark-mode .card .card-header{
     background-color: #2d2d2d;
+    border-color: #444444;
+    color: white;
+    border-color: white ;
 }
+
+.dark-mode .card-body {
+    background-color: #2d2d2d;
+    border-color: #444444;
+    color: white;
+    border-color: white; 
+}
+
+/*Контакти*/
+#contact-form form  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+#contact-form .form-group  {
+    flex: 1 1 calc(50% - 1rem);
+  
+}
+
+#contact-form .mb-2  {
+    flex: 1 1 100%;
+}
+
+#contact-form button  {
+    flex: 1 1 100%;
+    margin-top: 0.5rem;
+}
+
+.dark-mode .bg-body-tertiary {
+    background-color: #2d2d2d !important;
+}
+
+
+
+
+
+
 
 @media (max-width: 992px) {
     .feature {
