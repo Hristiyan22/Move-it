@@ -1,15 +1,22 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-/* 1. Дефиниране на CSS променливи */
+main {
+    flex: 1;
+}
+
 :root {
-    /* Светла тема (по подразбиране) */
     --body-bg: #ffffff;
     --text-color: #333333;
-    --navbar-bg: #f8f9fa; 
+    --navbar-bg: #f8f9fa;
     --border-color: #dee2e6;
     --btn-secondary: #6c757d;
 }
 
-/* 2. Дефиниране на .dark-mode променливи */
 .dark-mode {
     --body-bg: #1e1e1e;
     --text-color: #f0f0f0;
@@ -18,7 +25,6 @@
     --btn-secondary: #adb5bd;
 }
 
-/* 3. Прилагане на променливите и Унифицирано оформление */
 body {
     font-family: 'Inter', sans-serif;
     text-align: justify;
@@ -27,7 +33,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Прилагане на стиловете на тъмната тема към Bootstrap елементи */
 .dark-mode .navbar {
     background-color: var(--navbar-bg) !important;
 }
@@ -48,15 +53,16 @@ body {
     color: var(--btn-secondary);
     border-color: var(--btn-secondary);
 }
+
 .dark-mode .btn-outline-secondary:hover {
     color: var(--body-bg);
     background-color: var(--btn-secondary);
 }
 
-/* Стилизиране на граници и разделители */
 .dark-mode .border-bottom {
     border-color: var(--border-color) !important;
 }
+
 .dark-mode hr {
     background-color: var(--border-color);
 }
@@ -65,23 +71,20 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* Слънцето остава нормално */
 #themeIcon[src*="sun"] {
     filter: none;
 }
 
-.dark-mode .navbar-brand img[src*="box-seam"]{
+.dark-mode .navbar-brand img[src*="box-seam"] {
     filter: invert(1);
 }
 
-/*Dark mode prices-cards*/
-.dark-mode .card-body{
+.dark-mode .card-body {
     background-color: #2d2d2d;
     color: white;
 }
 
-/*Table white font*/
-.dark-mode table{
+.dark-mode table {
     color: white;
 }
 
@@ -92,9 +95,8 @@ body {
 
 .feature a.btn {
     margin-top: auto;
-    align-self:flex-start;
+    align-self: flex-start;
 }
-
 
 .feature-icon {
     width: 4rem;
@@ -144,9 +146,7 @@ footer .nav-link:hover {
     transition: color 0.2s ease-in-out;
 }
 
-/*Галерия*/
-
-.card-img-top{
+.card-img-top {
     height: 225px;
     object-fit: cover;
 }
@@ -156,46 +156,35 @@ footer .nav-link:hover {
     display: flex;
     flex-direction: column;
 }
-.dark-mode .card-body {
-    background-color: white;
-    border-color: #444444;
-    color: #2d2d2d;
-}
 
-
-/*Услуги*/
-.dark-mode .card .card-header{
+.dark-mode .card .card-header {
     background-color: #2d2d2d;
-    border-color: #444444;
-    color: white;
-    border-color: white ;
-}
-
-.dark-mode .card-body {
-    background-color: #2d2d2d;
-    border-color: #444444;
     color: white;
     border-color: white; 
 }
 
-/*Контакти*/
-#contact-form form  {
+.dark-mode .card-body {
+    background-color: #2d2d2d;
+    color: white;
+    border-color: white; 
+}
+
+#contact-form form {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
 }
 
-#contact-form .form-group  {
+#contact-form .form-group {
     flex: 1 1 calc(50% - 1rem);
-  
 }
 
-#contact-form .mb-2  {
+#contact-form .mb-2 {
     flex: 1 1 100%;
 }
 
-#contact-form button  {
+#contact-form button {
     flex: 1 1 100%;
     margin-top: 0.5rem;
 }
@@ -204,14 +193,59 @@ footer .nav-link:hover {
     background-color: #2d2d2d !important;
 }
 
+#carouselExampleInterval {
+    border-radius: 1rem;
+    overflow: hidden;
+}
 
+#carouselExampleInterval img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
 
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
 
+.gallery-item {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
 
+.gallery-item:hover {
+    transform: scale(1.03);
+}
 
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-title {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    padding: 40px 0;
+    margin-bottom: 40px;
+    color: white;
+    border-radius: 0 0 50px 50px;
+}
 
 @media (max-width: 992px) {
     .feature {
         margin-bottom: 3rem;
+    }
+
+    .dark-mode .navbar-toggler {
+        border-color: var(--border-color);
+    }
+
+    .dark-mode .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        border-color: white;
     }
 }

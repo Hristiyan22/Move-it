@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"> <img src="./icons/box-seam.svg" alt="Икона на кашон" width="30"
           height="24"> Move it</a>
@@ -28,7 +30,7 @@
           <li class="nav-item">
             <a class="nav-link" href="services.html">Услуги</a>
           </li>
-           <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="news.html">Новини</a>
           </li>
           <li class="nav-item">
@@ -41,10 +43,6 @@
             <a class="nav-link" href="contacts.html">Контакти</a>
           </li>
         </ul>
-        <form class="d-flex me-2" role="search">
-          <input class="form-control me-2" type="search" placeholder="Пощенски код" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Провери</button>
-        </form>
         <button id="theme-toggle" class="btn btn-outline-secondary">
           <img id="themeIcon" src="./icons/sun.svg" width="24">
         </button>
@@ -52,21 +50,160 @@
     </div>
   </nav>
 
-  <div class="container">
-    <footer class="py-3 my-4">
+  <main>
+    <section class="py-5 text-center container border-bottom custom-section">
+      <div class="row py-lg-5">
+  <div class="col-lg-6 col-md-8 mx-auto">
+    <h1 class="fw-light">Новини</h1><p></p>
+    <p class="lead text-body-secondary">
+      Следете последните новини и актуализации от Move-it – полезна информация за премествания, съвети за безопасност и истории от реални клиенти. Винаги се стремим да споделяме с вас важни събития и интересни моменти от нашата работа.
+    </p>
+  </div>
+</div>
+
+    </section>
+
+
+
+    <div class="album py-5 b">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/fragilePack.jpg" class="card-img-top" alt="Чупливи вещи">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Специална грижа за чупливи и ценни вещи по време на преместването.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 22.12.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/couple.jpg" class="card-img-top" alt="Двойка">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Ново начало в нов дом – ние поемаме тежката част вместо вас.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 10.12.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/family.jpg" class="card-img-top" alt="Семейно преместване">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Семейно преместване, съобразено с нуждите на всеки член от домакинството.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 28.11.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/dog.jpg" class="card-img-top" alt="Домашни любимци">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Грижим се за спокойствието на цялото семейство – включително и домашните любимци.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 15.11.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/movingTruck.jpeg" class="card-img-top" alt="Транспорт">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Собствен транспорт, оборудван за безопасно преместване на всякакви товари.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 02.11.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/packing.webp" class="card-img-top" alt="Опаковане на мебели">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Професионално опаковане на мебели и лични вещи с качествени материали.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 18.10.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/movingCouple.jpg" class="card-img-top" alt="Семейно преместване">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Помагаме на млади семейства да започнат новия си дом спокойно и сигурно.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 05.10.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/officeMoving.jpeg" class="card-img-top" alt="Офисно преместване">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Офисно преместване с внимание към техниката, мебелите и работния процес.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 25.09.2025</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/summerMoving.jpeg" class="card-img-top" alt="Лятно преместване">
+              <div class="card-body position-relative">
+                <p class="card-text">
+                  Лятно преместване на жилище – бързо, организирано и без излишен стрес за клиента.
+                </p><br>
+                <small class="text-body-secondary position-absolute bottom-0 end-0 m-2">Публикувано: 12.09.2025</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="py-3 my-4">
+    <div class="container">
+
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Начало</a></li>
         <li class="nav-item"><a href="services.html" class="nav-link px-2 text-body-secondary">Услуги</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link px-2 text-body-secondary">Новини</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link px-2 text-body-secondary">Галерия</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">За нас</a></li>
         <li class="nav-item"><a href="contacts.html" class="nav-link px-2 text-body-secondary">Контакти</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
       </ul>
       <p class="text-center text-body-secondary">© 2025 Move it Company. Всички права запазени.</p>
-    </footer>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
-    <script src = "./js/theme.js"></script>
+  <script src="./js/theme.js"></script>
 </body>
+
+
 </html>
