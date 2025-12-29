@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("themeIcon");
-    const storageKey = "theme"; // localStorage key
+    const storageKey = "theme"; 
 
     if (!themeToggle || !themeIcon) return;
 
-    // Apply saved theme on load
     function loadTheme() {
         const savedTheme = localStorage.getItem(storageKey);
 
@@ -18,17 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Toggle theme
     function toggleTheme() {
         document.body.classList.toggle("dark-mode");
         const isDark = document.body.classList.contains("dark-mode");
 
         themeIcon.src = isDark ? "./icons/moon-fill.svg" : "./icons/sun.svg";
 
-        // Save preference
         localStorage.setItem(storageKey, isDark ? "dark" : "light");
     }
 
-    loadTheme(); // Load saved theme
+    loadTheme();
     themeToggle.addEventListener("click", toggleTheme);
 });
+
