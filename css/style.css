@@ -1,3 +1,6 @@
+/* ==========================
+   Основни стилове
+========================== */
 html,
 body {
     height: 100%;
@@ -17,20 +20,20 @@ main {
     --btn-secondary: #6c757d;
 }
 
-.dark-mode {
-    --body-bg: #1e1e1e;
-    --text-color: #f0f0f0;
-    --navbar-bg: #2d2d2d;
-    --border-color: #444444;
-    --btn-secondary: #adb5bd;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     text-align: justify;
     background-color: var(--body-bg);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    --body-bg: #1e1e1e;
+    --text-color: #f0f0f0;
+    --navbar-bg: #2d2d2d;
+    --border-color: #444444;
+    --btn-secondary: #adb5bd;
 }
 
 .dark-mode .navbar {
@@ -41,10 +44,7 @@ body {
 .dark-mode .nav-link,
 .dark-mode h1,
 .dark-mode h2,
-.dark-mode h3 {
-    color: var(--text-color) !important;
-}
-
+.dark-mode h3,
 .dark-mode .text-body-secondary {
     color: var(--text-color) !important;
 }
@@ -71,10 +71,6 @@ body {
     filter: brightness(0) invert(1);
 }
 
-#themeIcon[src*="sun"] {
-    filter: none;
-}
-
 .dark-mode .navbar-brand img[src*="box-seam"] {
     filter: invert(1);
 }
@@ -88,6 +84,24 @@ body {
 
 .dark-mode table {
     color: white;
+}
+
+.dark-mode .bg-body-tertiary {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .contact,
+.dark-mode .form {
+    background-color: #3d3d3d !important;
+}
+
+.dark-mode .form-control {
+    background-color: #4d4d4d !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .form .form-control::placeholder {
+    color: #b0b0b0 !important;
 }
 
 .feature {
@@ -226,5 +240,9 @@ footer .nav-link:hover {
 
     .dark-mode .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .map {
+        height: 350px !important;
     }
 }
