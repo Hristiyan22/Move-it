@@ -17,16 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function toggleTheme() {
-        document.body.classList.toggle("dark-mode");
-        const isDark = document.body.classList.contains("dark-mode");
+   function toggleTheme() {
+    const isDark = document.body.classList.toggle("dark-mode");
 
-        themeIcon.src = isDark ? "./icons/moon-fill.svg" : "./icons/sun.svg";
-
-        localStorage.setItem(storageKey, isDark ? "dark" : "light");
+    if (isDark) {
+      themeIcon.src = "./icons/moon-fill.svg";
+      localStorage.setItem(storageKey, "dark");
+    } else {
+      themeIcon.src = "./icons/sun.svg";
+      localStorage.setItem(storageKey, "light");
     }
+  }
 
     loadTheme();
     themeToggle.addEventListener("click", toggleTheme);
 });
+
 
