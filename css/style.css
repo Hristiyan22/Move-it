@@ -79,9 +79,11 @@ body {
     filter: invert(1);
 }
 
-.dark-mode .card-body {
+.dark-mode .card-body,
+.dark-mode .card .card-header {
     background-color: #2d2d2d;
     color: white;
+    border-color: white;
 }
 
 .dark-mode table {
@@ -101,8 +103,37 @@ body {
 .feature-icon {
     width: 4rem;
     height: 4rem;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     background: linear-gradient(145deg, #0d6efd, #0a58ca);
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    transition: 0.2s all ease;
+}
+
+ul.navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+
+footer .nav-link:hover {
+    color: #0d6efd;
+    transition: color 0.2s ease-in-out;
+}
+
+#carouselExampleIndicators,
+#carouselExampleInterval {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#carouselExampleIndicators img,
+#carouselExampleInterval img {
+    width: 100%;
+    height: 70vh;
+    min-height: 300px;
+    max-height: 800px;
+    object-fit: cover;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -117,33 +148,10 @@ body {
     opacity: 1;
 }
 
-#carouselExampleIndicators {
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-#carouselExampleIndicators img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-}
-
-.btn-primary:hover {
-    transform: scale(1.03);
-    transition: 0.2s all ease;
-}
-
-section {
-    padding: 4rem 0;
-}
-
-ul.navbar-nav .nav-item {
-    margin-left: 1.5rem;
-}
-
-footer .nav-link:hover {
-    color: #0d6efd;
-    transition: color 0.2s ease-in-out;
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.75rem;
 }
 
 .card-img-top {
@@ -155,18 +163,6 @@ footer .nav-link:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.dark-mode .card .card-header {
-    background-color: #2d2d2d;
-    color: white;
-    border-color: white; 
-}
-
-.dark-mode .card-body {
-    background-color: #2d2d2d;
-    color: white;
-    border-color: white; 
 }
 
 #contact-form form {
@@ -187,27 +183,6 @@ footer .nav-link:hover {
 #contact-form button {
     flex: 1 1 100%;
     margin-top: 0.5rem;
-}
-
-.dark-mode .bg-body-tertiary {
-    background-color: #2d2d2d !important;
-}
-
-#carouselExampleInterval {
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-#carouselExampleInterval img {
-    width: 100%;
-    height: 800px;
-    object-fit: cover;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 0.75rem;
 }
 
 .gallery-item {
@@ -240,12 +215,16 @@ footer .nav-link:hover {
         margin-bottom: 3rem;
     }
 
+    #carouselExampleIndicators img,
+    #carouselExampleInterval img {
+        height: 50vh;
+    }
+
     .dark-mode .navbar-toggler {
         border-color: var(--border-color);
     }
 
     .dark-mode .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        border-color: white;
     }
 }
