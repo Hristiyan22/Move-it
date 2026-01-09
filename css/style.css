@@ -54,7 +54,7 @@ body {
 }
 
 .dark-mode #themeIcon[src*="moon-fill"] {
-    filter: brightness(0) invert(1);
+    filter: invert(1);
 }
 
 .dark-mode .navbar-brand img[src*="box-seam"] {
@@ -232,4 +232,5 @@ footer .nav-link:hover {
         height: 350px !important;
     }
 }
+
 
