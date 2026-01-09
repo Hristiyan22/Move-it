@@ -130,7 +130,7 @@ footer .nav-link:hover {
 #carouselExampleIndicators img,
 #carouselExampleInterval img {
     width: 100%;
-    height: 70vh;
+    height: auto;
     min-height: 300px;
     max-height: 800px;
     object-fit: cover;
@@ -232,3 +232,4 @@ footer .nav-link:hover {
         height: 350px !important;
     }
 }
+
